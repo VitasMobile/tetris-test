@@ -7,5 +7,5 @@
 4. Нажать кнопку Play для запуска игры
 
 ### Youtube demo
-[Gameplay demo](https://youtu.be/qwD9XfJYLV4)
-[3D demo](https://youtu.be/K7IfRUfd2Vc)
+1. [Gameplay demo](https://youtu.be/qwD9XfJYLV4)
+2. [3D demo](https://youtu.be/K7IfRUfd2Vc)
