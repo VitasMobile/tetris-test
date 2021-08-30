@@ -50,7 +50,7 @@ namespace TestTetris
             else if (
                 (Input.GetKeyDown(KeyCode.DownArrow) || (Input.GetKey(KeyCode.DownArrow))
                 && Time.time - _lastFall >= Settings.FALL_TIME && !_fallBlocking)
-                || Time.time - _lastFall >= Settings.AUTO_DROP_TIME
+                || Time.time - _lastFall >= GameManager.Speed
             )
             {
                 Fall();

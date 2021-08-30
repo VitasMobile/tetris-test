@@ -22,6 +22,8 @@ namespace TestTetris
         #region Game Data
         private int _levelCount = 1;
         private int _linesCount = 0;
+        private float _speed;
+        public static float Speed => _instance._speed;
 
 
         public static StageStateMachine Stages { get; private set; }
@@ -92,6 +94,8 @@ namespace TestTetris
 
             _instance._shapeCounterManager.Reset();
 
+            _speed = Settings.AUTO_DROP_TIME;
+
             _score.Reset();
         }
 
@@ -99,6 +103,8 @@ namespace TestTetris
         {
             _levelCount++;
             OnChangeLevelCounterEvent?.Invoke(_levelCount);
+
+            _speed = Mathf.Clamp(_speed - 0.05f, 0.1f, Settings.AUTO_DROP_TIME);
 
             SoundManager.PlaySound(SoundClip.LevelUp);
         }
